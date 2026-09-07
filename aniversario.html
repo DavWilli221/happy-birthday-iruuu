@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário! 🌸</title>
+    <link rel="stylesheet" href="aniversario.css">
+</head>
+<body>
+
+    <!-- 1. TELA INICIAL (LOBBY) -->
+    <div id="lobby" class="screen active">
+        <h1 class="mega-title">✨ FELIZ ANIVERSÁRIO! ✨</h1>
+        <p class="subtitle">Tenho uma surpresa muito especial preparada para você...</p>
+        <button class="envelope-btn" onclick="openSurprise()">
+            💌 <span>Abrir Cartinha</span>
+        </button>
+    </div>
+
+    <!-- 2. MENU PRINCIPAL (O ENVELOPE ANIMADO) -->
+    <div id="menu-screen" class="screen">
+        <div class="envelope-wrapper" id="envelopeWrapper">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="front"></div>
+                
+                <div class="letter-paper">
+                    <h2 class="menu-title">Made Just For You</h2>
+                    <p class="menu-subtitle">Escolha um presente para abrir</p>
+                    
+                    <div class="cards-grid">
+                        <div class="menu-card" onclick="navigateTo('fotos-screen')">
+                            <div class="card-icon">🌸</div>
+                            <h3>Ver Fotos</h3>
+                        </div>
+                        <div class="menu-card" onclick="navigateTo('musica-screen')">
+                            <div class="card-icon">🪞</div>
+                            <h3>Nossa Música</h3>
+                        </div>
+                        <div class="menu-card" onclick="navigateTo('carta-screen')">
+                            <div class="card-icon">✉️</div>
+                            <h3>Ler Mensagem</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. TELA DE FOTOS (MURAL EM CORAÇÃO) -->
+    <div id="fotos-screen" class="screen content-screen">
+        <button class="back-btn" onclick="navigateTo('menu-screen')">🌸 Voltar ao Menu</button>
+        <div class="heart-mural-container">
+            <h2 class="mural-title">Nossas Memórias ✨</h2>
+            <p class="mural-subtitle">Passe o mouse ou toque nas fotos para vê-las de perto!</p>
+            
+            <div class="heart-grid">
+                <div class="mural-photo pos-1"><img src="foto1.jpg" alt="Foto 1"></div>
+                <div class="mural-photo pos-2"><img src="foto2.jpg" alt="Foto 2"></div>
+                <div class="mural-photo pos-3"><img src="foto3.jpg" alt="Foto 3"></div>
+                <div class="mural-photo pos-4"><img src="foto4.jpg" alt="Foto 4"></div>
+                <div class="mural-photo pos-5"><img src="foto5.jpg" alt="Foto 5"></div>
+                <div class="mural-photo pos-6"><img src="foto6.jpg" alt="Foto 6"></div>
+                <div class="mural-photo pos-7"><img src="foto7.jpg" alt="Foto 7"></div>
+                <div class="mural-photo pos-8"><img src="foto8.jpg" alt="Foto 8"></div>
+                <div class="mural-photo pos-9"><img src="foto9.jpg" alt="Centro"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. TELA DA MÚSICA -->
+    <div id="musica-screen" class="screen content-screen">
+        <button class="back-btn" onclick="navigateTo('menu-screen')">🌸 Voltar ao Menu</button>
+        <div class="kawaii-box">
+            <h2>Nossa Música 🎵</h2>
+            <p class="song-quote">"HAPPY BIRTHDAY (PHONK Version)" • jxsh.exe</p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://youtube.com" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. TELA DA CARTA ESCRITA -->
+    <div id="carta-screen" class="screen content-screen">
+        <button class="back-btn" onclick="navigateTo('menu-screen')">🌸 Voltar ao Menu</button>
+        <div class="kawaii-box letter-box">
+            <h2>Querida pessoa especial... ❤️</h2>
+            <div class="letter-text">
+                <p>Escrevo esta cartinha para te dizer o quanto você é importante na minha vida. Seu sorriso ilumina qualquer dia cinzento e sua energia é contagiante.</p>
+                <p>Que o seu aniversário traga toda a felicidade do mundo, porque você merece cada pedacinho dela. Parabéns por ser quem você é!</p>
+                <p>Com muito amor, <br><strong>Seu Nome ✨</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="aniversario.js"></script>
+</body>
+</html>
